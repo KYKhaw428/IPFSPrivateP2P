@@ -1,0 +1,1 @@
+Test message, uploading from Peer1 bootstrap node to test if internal (connected by LAN) and external peers are able to receive.
