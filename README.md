@@ -42,7 +42,7 @@ Open the config file in each ipfs node folder, and change the API and Gateway to
 
 **Important note: If you are running more than 1 node on the same machine, the TCP should be different. For example, the API's tcp should be 5002 for the second node on the same machine. The same applies to the Gateway and Swarm TCP.**
 
-In the same folder, remove all the existing default bootstrap (because those are public IPFS bootstraps) and add your private bootstrap IP address as shown below:
+In the same file, search for the "Bootstrap" section and remove all the existing default bootstrap (because those are public IPFS bootstraps) and add your private bootstrap IP address as shown below:
 
 <img src="guideImages/Boostrapping%20config.png">
 
@@ -51,7 +51,11 @@ To obtain your ipfs peer id, run the same command for each node ```ipfs id```
 **Important note: You can only use your public IP address for the bootstrapping nodes, or the other nodes will be unable to locate the bootstrap if internal IP address is being used.**
 
 #### 4) Check for peers and connect them
-After all the nodes of the private network have started by running ```ipfs daemon```, check if they are connected to all the peers by running ```ipfs swarm peers```. If there are certain peers missing, go to the bootstrap node and run the same command ```ipfs swarm peers``` to get all the connected peers. Then you can proceed to connect any missing peers in your node by running ```ipfs swarm connect <replace this to multi addr of missing peers>```. And lastly, try running ```ipfs swarm peers``` again after you have connected the peers that were missing earlier to see if they are added to your peer list.
+	1. Run ```ipfs daemon``` on all the peers/nodes.
+	2. Check every nodes to see if they are connected to all the peers by running ```ipfs swarm peers```. 
+	3. If there are certain peers missing in that particular node, go to the bootstrap node and run the same command ```ipfs swarm peers``` to get all the connected peers. 
+	4. Then proceed to connect any missing peers in the particular node by running ```ipfs swarm connect <replace this to multi addr of missing peers>```. 
+	5. Lastly, try running ```ipfs swarm peers``` for the particular node again to check if the missing peers were added.
 
 
 
