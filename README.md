@@ -51,11 +51,11 @@ To obtain your ipfs peer id, run the same command for each node ```ipfs id```
 **Important note: You can only use your public IP address for the bootstrapping nodes, or the other nodes will be unable to locate the bootstrap if internal IP address is being used.**
 
 #### 4) Check for peers and connect them
-	1. Run ```ipfs daemon``` on all the peers/nodes.
-	2. Check every nodes to see if they are connected to all the peers by running ```ipfs swarm peers```. 
-	3. If there are certain peers missing in that particular node, go to the bootstrap node and run the same command ```ipfs swarm peers``` to get all the connected peers. 
-	4. Then proceed to connect any missing peers in the particular node by running ```ipfs swarm connect <replace this to multi addr of missing peers>```. 
-	5. Lastly, try running ```ipfs swarm peers``` for the particular node again to check if the missing peers were added.
+	1. Run __ipfs daemon__ on all the peers/nodes.
+	2. Check every nodes to see if they are connected to all the peers by running __ipfs swarm peers__. 
+	3. If there are certain peers missing in that particular node, go to the bootstrap node and run the same command __ipfs swarm peers__ to get all the connected peers. 
+	4. Then proceed to connect any missing peers in the particular node by running __ipfs swarm connect <replace this to multi addr of missing peers>__. 
+	5. Lastly, try running __ipfs swarm peers__ for the particular node again to check if the missing peers were added.
 
 
 
